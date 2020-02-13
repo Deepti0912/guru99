@@ -28,7 +28,6 @@ public class Homepage {
 
     @Then("^User should be able to see the correct title on the page$")
     public void userAbleToSeePageTitle (){
-
        Assert.assertEquals(driver.getTitle(),"Home page");
         driver.close();
     }
