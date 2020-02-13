@@ -20,7 +20,7 @@ public class Homepage {
     WebDriver driver ;
 
     @Given("^User the user navigates to the homepage$")
-    public void userNavigatesToHomepage (){
+    public void userNavigatesToHomepage () throws Throwable{
         System.setProperty("webdriver.chrome.driver","C:/guru99/driver/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("http://live.demoguru99.com/index.php/");
