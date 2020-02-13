@@ -5,6 +5,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import cucumber.api.junit.Cucumber;
+import cucumber.runtime.Utils;
 import org.junit.Assert;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
@@ -19,16 +20,16 @@ public class Homepage {
 
     WebDriver driver ;
 
-    @Given("^User the user navigates to the homepage$")
-    public void userNavigatesToHomepage () throws Throwable{
+    @Given("^User navigates to the homepage$")
+    public void userNavigatesToHomepage () throws Throwable {
         System.setProperty("webdriver.chrome.driver","C:/guru99/driver/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("http://live.demoguru99.com/index.php/");
     }
 
     @Then("^User should be able to see the correct title on the page$")
-    public void userAbleToSeePageTitle (){
-       Assert.assertEquals(driver.getTitle(),"Home page");
+    public void userAbleToSeeHomePageTitle ()throws Throwable{
+        Assert.assertEquals(driver.getTitle(),"Home page");
         driver.close();
     }
 
